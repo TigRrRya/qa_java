@@ -58,6 +58,7 @@ public class TestLion {
         assertEquals(expectedFood, actualFoodLion);
         verify(feline).getFood("Хищник");
     }
+
     @Test(expected = Exception.class)
     public void testInvalidSexThrowsException() throws Exception {
         new Lion("Неизвестный", new Feline());

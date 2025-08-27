@@ -8,7 +8,7 @@ import java.util.Arrays;
 import java.util.Collection;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.fail;
+
 
 @RunWith(Parameterized.class)
 public class ParameterizedTestSexLion {
@@ -23,11 +23,7 @@ public class ParameterizedTestSexLion {
 
     @Parameterized.Parameters
     public static Collection<Object[]> data() {
-        return Arrays.asList(new Object[][]{
-                {"Самец", true},
-                {"Самка", false},
-                {"Симба", false}
-        });
+        return Arrays.asList(new Object[][]{{"Самец", true}, {"Самка", false}, {"Симба", false}});
     }
 
     @Test
