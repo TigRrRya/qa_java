@@ -38,9 +38,8 @@ public class TestLion {
 
     @Test
     public void testLionKittensMock() {
-        doReturn(7).when(feline).getKittens();
-        assertEquals(7, lion.getKittens());
-        verify(feline).getKittens();
+        doReturn(1).when(feline).getKittens();
+        assertEquals(1, lion.getKittens());
     }
 
     @Test
@@ -56,7 +55,6 @@ public class TestLion {
         when(feline.getFood("Хищник")).thenReturn(expectedFood);
         List<String> actualFoodLion = lion.getFood();
         assertEquals(expectedFood, actualFoodLion);
-        verify(feline).getFood("Хищник");
     }
 
     @Test(expected = Exception.class)

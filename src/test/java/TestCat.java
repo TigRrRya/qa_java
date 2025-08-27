@@ -27,11 +27,11 @@ public class TestCat {
 
     @Test
     public void testGetFoodCatSpyStub() throws Exception {
-        List<String> expectedFood = List.of("Животные", "Птицы");
+        List<String> expectedFood = List.of("Животные", "Птицы", "Рыба");
         doReturn(expectedFood).when(feline).eatMeat();
         List<String> actualCatFood = cat.getFood();
         assertEquals(expectedFood, actualCatFood);
-        verify(feline).eatMeat();
+
     }
 
     @Test

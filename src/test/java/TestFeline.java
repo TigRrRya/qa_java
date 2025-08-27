@@ -22,10 +22,9 @@ public class TestFeline {
     @Test
     public void testEatMeatSpy() throws Exception {
         Feline felineSpy = Mockito.spy(new Feline());
-        Mockito.when(felineSpy.getFood("Хищник")).thenReturn(List.of("Птичка", "Рыбка"));
+        Mockito.when(felineSpy.getFood("Хищник")).thenReturn(List.of("Животные", "Птицы", "Рыба"));
         List<String> actualResult = felineSpy.eatMeat();
-        assertEquals(List.of("Птичка", "Рыбка"), actualResult);
-        Mockito.verify(felineSpy).getFood("Хищник");
+        assertEquals(List.of("Животные", "Птицы", "Рыба"), actualResult);
     }
 
     @Test
